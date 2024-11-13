@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blink {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.1); }
+}
+
+@keyframes smile {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(1.1) translateY(-2px); }
+}
+
+.billy-logo-container {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.billy-logo-container:hover {
+  transform: scale(1.1);
+}
+
+.billy-logo {
+  color: #4A90E2;
+}
+
+.billy-eye {
+  animation: blink 3s infinite;
+}
+
+.left-eye {
+  animation-delay: 0.5s;
+}
+
+.billy-smile {
+  animation: smile 5s infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop-in {
+  0% { opacity: 0; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+.animate-pop-in {
+  animation: pop-in 0.3s ease-out;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A90E2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #357ABD;
+}
